@@ -1,0 +1,464 @@
+
+//
+// bootstrap-chosen.less
+//
+// An alternate stylesheet for Chosen (http://harvesthq.github.com/chosen/).
+// This one is supposed to integrate better with Bootstrap.
+//
+// Submit bugfixes to: http://github.com/alxlit/bootstrap-chosen
+//
+
+@chznBackground: @inputBackground;
+@chznBorder: @inputBorder;
+@chznBorderRadius: @inputBorderRadius;
+@chznBoxShadow: ~"inset 0 1px 1px rgba(0, 0, 0, .075)";
+@chznDropBorder: @grayLight;
+@chznDropBoxShadow: ~"0 8px 8px rgba(0, 0, 0, .25)";
+@chznDropZIndex: 1060;
+@chznFocusBorder: rgba(82, 168, 236, .8);
+@chznFocusBoxShadow: ~"0 1px 1px rgba(0, 0, 0, .075) inset, 0 0 8px rgba(82, 168, 236, .6)";
+@chznFocusTransition: ~"border linear .2s, box-shadow linear .2s";
+@chznSpritePath: "chosen-sprite.png";
+
+@chznHeight: @baseLineHeight + 8px; // 4px padding
+@chznWidth: 220px;
+
+.chosen            { width: @chznWidth; }
+.chosen-mini       { width: 60px; }
+.chosen-small      { width: 90px; }
+.chosen-medium     { width: 150px; }
+.chosen-large      { width: 210px; }
+.chosen-xlarge     { width: 270px; }
+.chosen-xxlarge    { width: 530px; }
+
+.chzn-container {
+  display: inline-block;
+  .ie7-inline-block;
+  font-size: @baseFontSize;
+  position: relative;
+
+  .chzn-drop {
+    background: @chznBackground;
+    border: 1px solid @chznDropBorder;
+    border-top-color: lighten(@chznDropBorder, 25%);
+    .border-radius(@chznBorderRadius);
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    .box-shadow(@chznDropBoxShadow);
+    margin-top: -1px;
+    position: absolute;
+    top: @chznHeight + 1px; // set dynamically
+    left: 0;
+    z-index: @chznDropZIndex;
+  }
+
+  .chzn-results {
+    color: @gray;
+    margin: 0 4px 4px 0;
+    max-height: 240px;
+    padding: 0 0 0 4px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    li {
+      display: none;
+      line-height: @baseLineHeight; // 15px;
+      list-style: none;
+      margin: 0;
+      padding: 5px 6px;
+
+      em {
+        background: #feffde;
+        font-style: normal;
+      }
+    }
+
+    &:empty {
+      border: none;
+    }
+
+    .active-result {
+      cursor: pointer;
+      display: list-item;
+    }
+
+    .highlighted {
+      background-color: @linkColor;
+      color: @white;
+
+      em {
+        background: transparent;
+      }
+    }
+
+    .no-results {
+      background: @grayLighter;
+      display: list-item;
+    }
+
+    .group-result {
+      cursor: default;
+      color: #999;
+      font-weight: bold;
+    }
+
+    .group-option {
+      padding-left: 15px;
+    }
+  }
+
+  .chzn-results-scroll {
+    background: @white;
+    margin: 0 4px;
+    position: absolute;
+    text-align: center;
+    width: 321px;
+    z-index: 1;
+
+    span {
+      display: inline-block;
+      height: @baseLineHeight; // 17px;
+      text-indent: -5000px;
+      width: 9px;
+    }
+  }
+
+  .chzn-results-scroll-down {
+    bottom: 0;
+
+    span {
+      background: url("@{chznSpritePath}") no-repeat -4px -3px;
+    }
+  }
+
+  .chzn-results-scroll-up {
+    span {
+      background: url("@{chznSpritePath}") no-repeat -22px -3px;
+    }
+  }
+}
+
+.chzn-container-single {
+  .chzn-single {
+    background-color: @chznBackground;
+    #gradient > .vertical(@white, @grayLighter);
+    //.border-radius(5px);
+    -webkit-background-clip: padding-box;
+       -moz-background-clip: padding;
+            background-clip: padding-box;
+    border: 1px solid @chznBorder;
+    .box-shadow(@chznBoxShadow);
+    color: @gray;
+    display: block;
+    height: @chznHeight;
+    overflow: hidden;
+    line-height: @chznHeight;
+    padding: 0 0 0 8px;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+
+    span {
+      display: block;
+      margin-right: 26px;
+      .text-overflow();
+    }
+
+    abbr {
+      background: url("@{chznSpritePath}") right top no-repeat;
+      display: block;
+      font-size: 1px;
+      height: 10px;
+      position: absolute;
+      right: 26px;
+      top: 8px;
+      width: 12px;
+
+      &:hover {
+        background-position: right -11px;
+      }
+    }
+
+    &.chzn-disabled .chzn-single abbr:hover {
+      background-position: right 2px;
+    }
+
+    div {
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 18px;
+
+      b {
+        background: url("@{chznSpritePath}") no-repeat 0 2px;
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .chzn-default {
+    color: @grayLight;
+  }
+
+  .chzn-search {
+    margin: 0;
+    padding: 3px 4px;
+    position: relative;
+    white-space: nowrap;
+    z-index: @zindexDropdown;
+
+    input {
+      background: url("@{chznSpritePath}") no-repeat 100% -21px, @chznBackground;
+      border: 1px solid @chznBorder;
+      .border-radius(@chznBorderRadius);
+      .box-shadow(@chznBoxShadow);
+      margin: 1px 0;
+      padding: 4px 20px 4px 4px;
+    }
+  }
+
+  .chzn-drop {
+    .border-radius(@chznBorderRadius);
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    -webkit-background-clip: padding-box;
+       -moz-background-clip: padding;
+            background-clip: padding-box;
+  }
+}
+
+.chzn-container-single-nosearch {
+  .chzn-search {
+    input {
+      position: absolute;
+      left: -9000px;
+    }
+  }
+}
+
+.chzn-container-multi {
+  .chzn-choices {
+    background-color: @chznBackground;
+    border: 1px solid @chznBorder;
+    .border-radius(@chznBorderRadius);
+    .box-shadow(@chznBoxShadow);
+    cursor: text;
+    height: auto !important;
+    height: 1%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+
+    li {
+      float: left;
+      list-style: none;
+    }
+
+    .search-field {
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+
+      input {
+        background: transparent !important;
+        border: 0 !important;
+        .box-shadow(none);
+        color: @gray;
+        height: @chznHeight - 8px;
+        margin: 0;
+        padding: 4px;
+        outline: 0;
+      }
+
+      .default {
+        color: #999;
+      }
+    }
+
+    .search-choice {
+      -webkit-background-clip: padding-box;
+         -moz-background-clip: padding;
+              background-clip: padding-box;
+      background-color: @grayLighter;
+      border: 1px solid @chznBorder;
+      .border-radius(@chznBorderRadius);
+      #gradient > .vertical(@white, @grayLighter);
+      .box-shadow(@chznBoxShadow);
+      color: @grayDark;
+      cursor: default;
+      line-height: 13px;
+      margin: 3px 0 3px 5px;
+      padding: 3px 20px 3px 5px;
+      position: relative;
+
+      .search-choice-close {
+        background: url("@{chznSpritePath}") right top no-repeat;
+        display: block;
+        font-size: 1px;
+        height: 13px;
+        position: absolute;
+        right: 3px;
+        top: 4px;
+        width: 12px;
+
+        &:hover {
+          background-position: right -11px;
+        }
+      }
+    }
+
+    .search-choice-focus {
+      background: #d4d4d4;
+
+      .search-choice-close {
+        background-position: right -11px;
+      }
+    }
+  }
+
+  .chzn-results {
+    margin: 0 0 0 0;
+    padding: 0;
+  }
+
+  .chzn-drop {
+    .result-selected {
+      display: none;
+    }
+  }
+}
+
+.chzn-container-active {
+  .chzn-single {
+    border: 1px solid @chznFocusBorder;
+    .box-shadow(@chznFocusBoxShadow);
+    .transition(@chznFocusTransition);
+  }
+
+  .chzn-single-with-drop {
+    background-color: @grayLighter;
+    border: 1px solid @chznFocusBorder;
+    .box-shadow(@chznFocusBoxShadow);
+    .transition(@chznFocusTransition);
+
+    div {
+      background: transparent;
+      border-left: none;
+
+      b {
+        background-position: -18px 2px;
+      }
+    }
+  }
+
+  .chzn-choices {
+    border: 1px solid @chznFocusBorder;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+       -moz-border-radius-bottomleft: 0;
+       -moz-border-radius-bottomright: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+    .box-shadow(@chznFocusBoxShadow);
+    .transition(@chznFocusTransition);
+
+    .search-field input {
+      color: #111 !important;
+    }
+  }
+}
+
+.chzn-disabled {
+  cursor: default;
+  opacity: 0.5 !important;
+
+  .chzn-single {
+    cursor: default;
+  }
+
+  .chzn-choices .search-choice .search-choice-close {
+    cursor: default;
+  }
+}
+
+.chzn-rtl {
+  text-align: right;
+
+  .chzn-single {
+    padding: 0 8px 0 0;
+    overflow: visible;
+
+    span {
+      margin-left: 26px;
+      margin-right: 0;
+      direction: rtl;
+    }
+
+    div {
+      left: 3px;
+      right: auto;
+    }
+
+    abbr {
+      left: 26px;
+      right: auto;
+    }
+  }
+
+  .chzn-choices {
+    .search-field input {
+      direction: rtl;
+    }
+
+    li {
+      float: right;
+    }
+
+    .search-choice {
+      margin: 3px 5px 3px 0;
+      padding: 3px 5px 3px 19px;
+
+      .search-choice-close {
+        background-position: right top;
+        left: 4px;
+        right: auto;
+      }
+    }
+  }
+
+  &.chzn-container-single .chzn-results {
+    margin: 0 0 4px 4px;
+    padding: 0 4px 0 0;
+  }
+
+  .chzn-results .group-option {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+
+  &.chzn-container-active .chzn-single-with-drop div {
+    border-right: none;
+  }
+
+  .chzn-search input {
+    background: url("@{chznSpritePath}") no-repeat -38px -22px, @chznBackground;
+    direction: rtl;
+    padding: 4px 5px 4px 20px;
+  }
+}
+

@@ -18,18 +18,16 @@
 @chznFocusBorder: rgba(82, 168, 236, .8);
 @chznFocusBoxShadow: ~"0 1px 1px rgba(0, 0, 0, .075) inset, 0 0 8px rgba(82, 168, 236, .6)";
 @chznFocusTransition: ~"border linear .2s, box-shadow linear .2s";
+@chznHeight: @baseLineHeight + 8px; // 4px padding
 @chznSpritePath: "chosen-sprite.png";
 
-@chznHeight: @baseLineHeight + 8px; // 4px padding
-@chznWidth: 220px;
-
-.chosen            { width: @chznWidth; }
-.chosen-mini       { width: 60px; }
-.chosen-small      { width: 90px; }
-.chosen-medium     { width: 150px; }
-.chosen-large      { width: 210px; }
-.chosen-xlarge     { width: 270px; }
-.chosen-xxlarge    { width: 530px; }
+.chosen            { width: 220px; }
+.chosen-mini       { width: 70px; }
+.chosen-small      { width: 100px; }
+.chosen-medium     { width: 160px; }
+.chosen-large      { width: 220px; }
+.chosen-xlarge     { width: 280px; }
+.chosen-xxlarge    { width: 540px; }
 
 .chzn-container {
   display: inline-block;
@@ -79,9 +77,9 @@
       }
     }
 
-    &:empty {
-      border: none;
-    }
+    // &:empty {
+    // border: none;
+    // }
 
     .active-result {
       cursor: pointer;

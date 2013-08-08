@@ -28,14 +28,14 @@
 .chosen-xlarge     { width: 280px; }
 .chosen-xxlarge    { width: 540px; }
 
-.chzn-container {
+.chosen-container {
   display: inline-block;
   .ie7-inline-block;
   font-size: @baseFontSize;
   position: relative;
   vertical-align: middle;
 
-  .chzn-drop {
+  .chosen-drop {
     background: @chznBackground;
     border: 1px solid @chznDropBorder;
     border-top-color: lighten(@chznDropBorder, 25%);
@@ -54,11 +54,11 @@
     z-index: @chznDropZIndex;
   }
 
-  &.chzn-with-drop .chzn-drop {
+  &.chosen-with-drop .chosen-drop {
     left: 0;
   }
 
-  .chzn-results {
+  .chosen-results {
     color: @gray;
     margin: 0 4px 4px 0;
     max-height: 240px;
@@ -115,7 +115,7 @@
     }
   }
 
-  .chzn-results-scroll {
+  .chosen-results-scroll {
     background: @white;
     margin: 0 4px;
     position: absolute;
@@ -131,7 +131,7 @@
     }
   }
 
-  .chzn-results-scroll-down {
+  .chosen-results-scroll-down {
     bottom: 0;
 
     span {
@@ -139,15 +139,15 @@
     }
   }
 
-  .chzn-results-scroll-up {
+  .chosen-results-scroll-up {
     span {
       background: url("@{chznSpritePath}") no-repeat -22px -3px;
     }
   }
 }
 
-.chzn-container-single {
-  .chzn-single {
+.chosen-container-single {
+  .chosen-single {
     background-color: @chznBackground;
     #gradient > .vertical(@white, @grayLighter);
     //.border-radius(5px);
@@ -187,7 +187,7 @@
       }
     }
 
-    &.chzn-disabled .chzn-single abbr:hover {
+    &.chosen-disabled .chosen-single abbr:hover {
       background-position: right 2px;
     }
 
@@ -208,11 +208,11 @@
     }
   }
 
-  .chzn-default {
+  .chosen-default {
     color: @grayLight;
   }
 
-  .chzn-search {
+  .chosen-search {
     margin: 0;
     padding: 3px 4px;
     position: relative;
@@ -229,7 +229,7 @@
     }
   }
 
-  .chzn-drop {
+  .chosen-drop {
     margin-top: -1px;
     .border-radius(@chznBorderRadius);
     -webkit-border-top-left-radius: 0;
@@ -244,8 +244,8 @@
   }
 }
 
-.chzn-container-single-nosearch {
-  .chzn-search {
+.chosen-container-single-nosearch {
+  .chosen-search {
     input {
       position: absolute;
       left: -9000px;
@@ -253,8 +253,8 @@
   }
 }
 
-.chzn-container-multi {
-  .chzn-choices {
+.chosen-container-multi {
+  .chosen-choices {
     background-color: @chznBackground;
     border: 1px solid @chznBorder;
     .border-radius(@chznBorderRadius);
@@ -334,26 +334,26 @@
     }
   }
 
-  .chzn-results {
+  .chosen-results {
     margin: 0 0 0 0;
     padding: 0;
   }
 
-  .chzn-drop {
+  .chosen-drop {
     .result-selected {
       display: none;
     }
   }
 }
 
-.chzn-container-active {
-  .chzn-single {
+.chosen-container-active {
+  .chosen-single {
     border: 1px solid @chznFocusBorder;
     .box-shadow(@chznFocusBoxShadow);
     .transition(@chznFocusTransition);
   }
 
-  &.chzn-with-drop .chzn-single {
+  &.chosen-with-drop .chosen-single {
     background-color: @grayLighter;
     border: 1px solid @chznFocusBorder;
     .box-shadow(@chznFocusBoxShadow);
@@ -369,7 +369,7 @@
     }
   }
 
-  .chzn-choices {
+  .chosen-choices {
     border: 1px solid @chznFocusBorder;
     -webkit-border-bottom-left-radius: 0;
     -webkit-border-bottom-right-radius: 0;
@@ -386,23 +386,23 @@
   }
 }
 
-.chzn-disabled {
+.chosen-disabled {
   cursor: default;
   opacity: 0.5 !important;
 
-  .chzn-single {
+  .chosen-single {
     cursor: default;
   }
 
-  .chzn-choices .search-choice .search-choice-close {
+  .chosen-choices .search-choice .search-choice-close {
     cursor: default;
   }
 }
 
-.chzn-rtl {
+.chosen-rtl {
   text-align: right;
 
-  .chzn-single {
+  .chosen-single {
     padding: 0 8px 0 0;
     overflow: visible;
 
@@ -423,7 +423,7 @@
     }
   }
 
-  .chzn-choices {
+  .chosen-choices {
     .search-field input {
       direction: rtl;
     }
@@ -444,21 +444,21 @@
     }
   }
 
-  &.chzn-container-single .chzn-results {
+  &.chosen-container-single .chosen-results {
     margin: 0 0 4px 4px;
     padding: 0 4px 0 0;
   }
 
-  .chzn-results .group-option {
+  .chosen-results .group-option {
     padding-left: 0;
     padding-right: 15px;
   }
 
-  &.chzn-container-active.chzn-with-drop .chzn-single div {
+  &.chosen-container-active.chosen-with-drop .chosen-single div {
     border-right: none;
   }
 
-  .chzn-search input {
+  .chosen-search input {
     background: url("@{chznSpritePath}") no-repeat -38px -22px, @chznBackground;
     direction: rtl;
     padding: 4px 5px 4px 20px;

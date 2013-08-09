@@ -10,15 +10,17 @@
       header h1 { font-size: 54px; }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="http://harvesthq.github.com/chosen/chosen/chosen.jquery.js"></script>
+    <script src="http://harvesthq.github.io/chosen/chosen.jquery.js"></script>
     <script>
       $(function() {
-        $('.chzn-select').chosen();
-        $('.chzn-select-deselect').chosen({ allow_single_deselect: true });
+        $('.chosen-select').chosen();
+        $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
       });
     </script>
   </head>
   <body>
+    <a href="https://github.com/alxlit/bootstrap-chosen"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
     <div class="container">
       <header>
         <h1>Bootstrap + Chosen</h1>
@@ -29,14 +31,13 @@
       </div>
 
       <div class="row">
-        <div class="span3">
-          <select>
+        <div class="col-lg-3">
+          <select class="form-control">
             <option>Ordinary select box</option>
           </select>
         </div>
-        <div class="span3">
-          <div class="chosen">
-            <select data-placeholder="Choose a Country" class="chzn-select" tabindex="2">
+        <div class="col-lg-3">
+            <select data-placeholder="Choose a Country" class="chosen-select" tabindex="2">
               <option value=""></option>
               <option value="United States">United States</option>
               <option value="United Kingdom">United Kingdom</option>
@@ -283,7 +284,6 @@
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
           </div>
-        </div>
       </div>
 
       <div class="page-header">
@@ -291,12 +291,13 @@
       </div>
 
       <div class="row">
-        <div class="span3">
-          <input type="text" value="Ordinary text box" />
+        <div class="col-lg-3">
+          <form>
+            <input type="text" class="form-control" value="Ordinary text box" />
+          </form>
         </div>
-        <div class="span3">
-          <div class="chosen">
-            <select data-placeholder="Choose a Country" class="chzn-select" multiple tabindex="4">
+        <div class="col-lg-3">
+            <select data-placeholder="Choose a Country" class="chosen-select" multiple tabindex="4">
               <option value=""></option>
               <option value="United States">United States</option>
               <option value="United Kingdom">United Kingdom</option>
@@ -542,7 +543,6 @@
               <option value="Zambia">Zambia</option>
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
-          </div>
         </div>
       </div>
 
@@ -551,10 +551,9 @@
       </div>
 
       <div class="row">
-        <div class="span6">
+        <div class="col-lg-6">
           <h3>Single Select with Groups</h3>
-          <div class="chosen">
-            <select data-placeholder="Your Favorite Football Team" class="chzn-select" tabindex="5">
+            <select data-placeholder="Your Favorite Football Team" class="chosen-select" tabindex="5">
               <option value=""></option>
               <optgroup label="NFC EAST">
                 <option>Dallas Cowboys</option>
@@ -605,13 +604,11 @@
                 <option>San Diego Chargers</option>
               </optgroup>
             </select>
-          </div>
         </div>
 
-        <div class="span6">
+        <div class="col-lg-6">
           <h3>Multiple Select with Groups</h3>
-          <div class="chosen">
-            <select data-placeholder="Your Favorite Football Teams" class="chzn-select" multiple tabindex="6">
+            <select data-placeholder="Your Favorite Football Teams" class="chosen-select" multiple tabindex="6">
               <option value=""></option>
               <optgroup label="NFC EAST">
                 <option>Dallas Cowboys</option>
@@ -662,7 +659,6 @@
                 <option>San Diego Chargers</option>
               </optgroup>
             </select>
-          </div>
         </div>
       </div>
 
@@ -671,10 +667,9 @@
       </div>
 
       <div class="row">
-        <div class="span6">
+        <div class="col-lg-6">
           <h3>Single Select</h3>
-          <div class="chosen">
-            <select data-placeholder="Your Favorite Type of Bear" class="chzn-select" tabindex="7">
+            <select data-placeholder="Your Favorite Type of Bear" class="chosen-select" tabindex="7">
               <option value=""></option>
               <option>American Black Bear</option>
               <option>Asiatic Black Bear</option>
@@ -685,13 +680,11 @@
               <option>Polar Bear</option>
               <option disabled>Spectacled Bear</option>
             </select>
-          </div>
         </div>
 
-        <div class="span6">
+        <div class="col-lg-6">
           <h3>Multiple Select</h3>
-          <div class="chosen">
-            <select data-placeholder="Your Favorite Types of Bear" multiple class="chzn-select" tabindex="8">
+            <select data-placeholder="Your Favorite Types of Bear" multiple class="chosen-select" tabindex="8">
               <option value=""></option>
               <option>American Black Bear</option>
               <option>Asiatic Black Bear</option>
@@ -702,7 +695,6 @@
               <option selected>Polar Bear</option>
               <option disabled>Spectacled Bear</option>
             </select>
-          </div>
         </div>
       </div>
 
@@ -711,20 +703,54 @@
       </div>
 
       <div class="row">
-        <div class="span12">
-          <div class="chosen">
-            <select data-placeholder="Your Favorite Type of Bear" class="chzn-select-deselect" tabindex="7">
+        <div class="col-lg-3">
+          <select data-placeholder="Your Favorite Type of Bear" class="chosen-select-deselect" tabindex="7">
+            <option value=""></option>
+            <option>American Black Bear</option>
+            <option>Asiatic Black Bear</option>
+            <option>Brown Bear</option>
+            <option>Giant Panda</option>
+            <option selected>Sloth Bear</option>
+            <option>Sun Bear</option>
+            <option>Polar Bear</option>
+            <option>Spectacled Bear</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="page-header">
+        <h2>Right to Left</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h3>Single Select</h3>
+            <select data-placeholder="Your Favorite Type of Bear" class="chosen-select chosen-rtl" tabindex="7">
               <option value=""></option>
               <option>American Black Bear</option>
               <option>Asiatic Black Bear</option>
               <option>Brown Bear</option>
               <option>Giant Panda</option>
               <option selected>Sloth Bear</option>
-              <option>Sun Bear</option>
+              <option disabled>Sun Bear</option>
               <option>Polar Bear</option>
-              <option>Spectacled Bear</option>
+              <option disabled>Spectacled Bear</option>
             </select>
-          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <h3>Multiple Select</h3>
+            <select data-placeholder="Your Favorite Types of Bear" multiple class="chosen-select chosen-rtl" tabindex="8">
+              <option value=""></option>
+              <option>American Black Bear</option>
+              <option>Asiatic Black Bear</option>
+              <option>Brown Bear</option>
+              <option>Giant Panda</option>
+              <option>Sloth Bear</option>
+              <option disabled>Sun Bear</option>
+              <option selected>Polar Bear</option>
+              <option disabled>Spectacled Bear</option>
+            </select>
         </div>
       </div>
     </div>

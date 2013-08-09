@@ -2,34 +2,24 @@
 
 ![](https://github.com/alxlit/bootstrap-chosen/raw/master/example.png)
 
-An alternate stylesheet for [Chosen](http://harvesthq.github.com/chosen/). This
-one is supposed to integrate better with Bootstrap.
+An alternate stylesheet for [Chosen 1.0](http://harvesthq.github.com/chosen/). This
+one is supposed to integrate better with [Bootstrap 3.0](http://getbootstrap.com/).
 
-## Usage
+[Here's the example page](http://alxlit.github.io/bootstrap-chosen/).
 
-Chosen widgets are given the `outerWidth` of the form element that they are
-replacing, which is ambiguous and often not what you'd expect. Wrap them with
-the "chosen" class (or chosen-mini, chosen-small, etc) to fix this.
+How you add `bootstrap-chosen.less` to your build process is up to you. Just keep
+in mind that it needs
 
-```html
-<div class="chosen">
-  <select class="chzn-select">
-    <option>...</option>
-  </select>
-</div>
-```
+To use it, `bootstrap-chosen.less` to your Bootstrap build somewhere near the end.
+Or build it separately, just keep in mind that it needs access to `variables.less`
+and `mixins.less`.
 
-How you add `bootstrap-chosen.less` to you build process is up to you. Just keep in mind
-that it needs access to `variables.less` and `mixins.less`.
-
-## Development
-
-Set up the example page by:
+You can tinker with the example page by:
 
 ```
 $ git clone https://github.com/alxlit/bootstrap-chosen
 $ cd bootstrap-chosen
-bootstrap-chosen $ git clone https://github.com/twitter/bootstrap
+bootstrap-chosen $ git clone https://github.com/twbs/bootstrap
 bootstrap-chosen $ vi bootstrap/less/bootstrap.less
 
 // Add this to the bottom

@@ -8,11 +8,7 @@ one is supposed to integrate better with [Bootstrap 3.0](http://getbootstrap.com
 [Here's the example page](http://alxlit.github.io/bootstrap-chosen/).
 
 How you add `bootstrap-chosen.less` to your build process is up to you. Just keep
-in mind that it needs
-
-To use it, `bootstrap-chosen.less` to your Bootstrap build somewhere near the end.
-Or build it separately, just keep in mind that it needs access to `variables.less`
-and `mixins.less`.
+in mind that it needs access to `variables.less` and `mixins.less`.
 
 You can tinker with the example page by:
 

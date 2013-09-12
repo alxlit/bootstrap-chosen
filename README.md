@@ -1,4 +1,4 @@
-# bootstrap-chosen.less
+# bootstrap-chosen (less/sass)
 
 ![](https://github.com/alxlit/bootstrap-chosen/raw/master/example.png)
 

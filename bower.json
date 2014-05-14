@@ -1,0 +1,14 @@
+{
+  "name": "bootstrap-chosen",
+  "version": "1.0.0",
+  "homepage": "https:\/\/github.com\/alxlit\/bootstrap-chosen",
+  "authors": [
+    "alxlit <alxlit+github@alxlit.name>"
+  ],
+  "description": "An alternate stylesheet for Chosen (http://harvesthq.github.com/chosen/).",
+  "keywords": [
+    "bootstrap",
+    "chosen"
+  ],
+  "license": "MIT"
+}

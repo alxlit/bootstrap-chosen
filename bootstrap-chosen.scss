@@ -198,7 +198,7 @@
     white-space: nowrap;
     z-index: $zindex-dropdown;
 
-    input {
+    input[type="text"] {
       background: url($chosen-sprite-path) no-repeat 100% -20px, $chosen-background;
       border: 1px solid $chosen-border;
       @include border-top-radius($chosen-border-radius);
@@ -221,7 +221,7 @@
 
 .chosen-container-single-nosearch {
   .chosen-search {
-    input {
+    input[type="text"] {
       position: absolute;
       left: -9000px;
     }
@@ -253,7 +253,7 @@
       padding: 0;
       white-space: nowrap;
 
-      input {
+      input[type="text"] {
         background: transparent !important;
         border: 0 !important;
         @include box-shadow(none);
@@ -352,7 +352,7 @@
     @include box-shadow($chosen-focus-box-shadow);
     @include transition($chosen-focus-transition);
 
-    .search-field input {
+    .search-field input[type="text"] {
       color: #111 !important;
     }
   }
@@ -396,7 +396,7 @@
   }
 
   .chosen-choices {
-    .search-field input {
+    .search-field input[type="text"] {
       direction: rtl;
     }
 
@@ -430,7 +430,7 @@
     border-right: none;
   }
 
-  .chosen-search input {
+  .chosen-search input[type="text"] {
     background: url($chosen-sprite-path) no-repeat -28px -20px, $chosen-background;
     direction: rtl;
     padding: 4px 5px 4px 20px;

@@ -76,6 +76,7 @@
 
       &.highlighted {
         background-color: $link-color;
+        background-image: none;
         color: white;
 
         em {
@@ -198,7 +199,7 @@
     white-space: nowrap;
     z-index: $zindex-dropdown;
 
-    input {
+    input[type="text"] {
       background: url($chosen-sprite-path) no-repeat 100% -20px, $chosen-background;
       border: 1px solid $chosen-border;
       @include border-top-radius($chosen-border-radius);
@@ -221,7 +222,7 @@
 
 .chosen-container-single-nosearch {
   .chosen-search {
-    input {
+    input[type="text"] {
       position: absolute;
       left: -9000px;
     }
@@ -253,7 +254,7 @@
       padding: 0;
       white-space: nowrap;
 
-      input {
+      input[type="text"] {
         background: transparent !important;
         border: 0 !important;
         @include box-shadow(none);
@@ -352,7 +353,7 @@
     @include box-shadow($chosen-focus-box-shadow);
     @include transition($chosen-focus-transition);
 
-    .search-field input {
+    .search-field input[type="text"] {
       color: #111 !important;
     }
   }
@@ -396,7 +397,7 @@
   }
 
   .chosen-choices {
-    .search-field input {
+    .search-field input[type="text"] {
       direction: rtl;
     }
 
@@ -430,9 +431,21 @@
     border-right: none;
   }
 
-  .chosen-search input {
+  .chosen-search input[type="text"] {
     background: url($chosen-sprite-path) no-repeat -28px -20px, $chosen-background;
     direction: rtl;
     padding: 4px 5px 4px 20px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
+  .chosen-rtl .chosen-search input[type="text"],
+  .chosen-container-single .chosen-single abbr,
+  .chosen-container-single .chosen-single div b,
+  .chosen-container-single .chosen-search input[type="text"],
+  .chosen-container-multi .chosen-choices .search-choice .search-choice-close,
+  .chosen-container .chosen-results-scroll-down span,
+  .chosen-container .chosen-results-scroll-up span {
+    background-image: url($chosen-sprite-retina-path) !important;
   }
 }

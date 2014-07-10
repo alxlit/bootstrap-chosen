@@ -447,5 +447,7 @@
   .chosen-container .chosen-results-scroll-down span,
   .chosen-container .chosen-results-scroll-up span {
     background-image: url($chosen-sprite-retina-path) !important;
+    background-size: 52px 37px !important;
+    background-repeat: no-repeat !important;
   }
 }

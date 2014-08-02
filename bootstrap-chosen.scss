@@ -21,7 +21,6 @@
   .chosen-drop {
     background: $chosen-background;
     border: 1px solid $chosen-drop-border;
-    border-top-color: lighten($chosen-drop-border, 25%);
     @include border-bottom-radius($chosen-border-radius);
     @include box-shadow($chosen-drop-box-shadow);
     margin-top: -1px;
@@ -130,11 +129,12 @@
 .chosen-container-single {
   .chosen-single {
     background-color: $chosen-background;
-    @include gradient-vertical(white, $gray-lighter);
     -webkit-background-clip: padding-box;
        -moz-background-clip: padding;
             background-clip: padding-box;
     border: 1px solid $chosen-border;
+    @include border-top-radius($chosen-border-radius);
+    @include border-bottom-radius($chosen-border-radius);
     @include box-shadow($chosen-box-shadow);
     color: $gray;
     display: block;
@@ -296,6 +296,7 @@
         right: 4px;
         top: 5px;
         width: 12px;
+        cursor: pointer;
 
         &:hover {
           background-position: right -11px;
@@ -332,8 +333,9 @@
   }
 
   &.chosen-with-drop .chosen-single {
-    background-color: $gray-lighter;
+    background-color: $input-bg;
     border: 1px solid $chosen-focus-border;
+    @include border-bottom-radius(0);
     @include box-shadow($chosen-focus-box-shadow);
     @include transition($chosen-focus-transition);
 
@@ -356,6 +358,10 @@
     .search-field input[type="text"] {
       color: #111 !important;
     }
+  }
+
+  &.chosen-with-drop .chosen-choices {
+    @include border-bottom-radius(0);
   }
 }
 

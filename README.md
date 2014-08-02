@@ -15,7 +15,7 @@ You can tinker with the example page by:
 ```
 $ git clone https://github.com/alxlit/bootstrap-chosen
 $ cd bootstrap-chosen
-bootstrap-chosen $ git clone https://github.com/twbs/bootstrap
+bootstrap-chosen $ git clone --depth=1 https://github.com/twbs/bootstrap
 bootstrap-chosen $ vi bootstrap/less/bootstrap.less
 
 // Add this to the bottom

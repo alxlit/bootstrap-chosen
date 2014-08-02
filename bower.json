@@ -14,8 +14,8 @@
   "main": [
     "bootstrap-chosen-variables.less", 
     "bootstrap-chosen-variables.scss",
-    "bootstrap-chosen.less"
-    "bootstrap-chosen.scss"
+    "bootstrap-chosen.less",
+    "bootstrap-chosen.scss",
     "chosen-sprite.png",
     "chosen-sprite@2x.png"
   ],

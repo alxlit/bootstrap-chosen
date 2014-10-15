@@ -132,7 +132,7 @@
     -webkit-background-clip: padding-box;
        -moz-background-clip: padding;
             background-clip: padding-box;
-    border: 1px solid @chosen-border;
+    border: @chosen-border;
     .border-top-radius(@chosen-border-radius);
     .border-bottom-radius(@chosen-border-radius);
     .box-shadow(@chosen-box-shadow);
@@ -201,7 +201,7 @@
 
     input[type="text"] {
       background: url("@{chosen-sprite-path}") no-repeat 100% -20px, @chosen-background;
-      border: 1px solid @chosen-border;
+      border: @chosen-border;
       .border-top-radius(@chosen-border-radius);
       .border-bottom-radius(@chosen-border-radius);
       .box-shadow(@chosen-box-shadow);
@@ -232,7 +232,7 @@
 .chosen-container-multi {
   .chosen-choices {
     background-color: @chosen-background;
-    border: 1px solid @chosen-border;
+    border: @chosen-border;
     .border-top-radius(@chosen-multi-border-radius);
     .border-bottom-radius(@chosen-multi-border-radius);
     .box-shadow(@chosen-box-shadow);
@@ -275,7 +275,7 @@
          -moz-background-clip: padding;
               background-clip: padding-box;
       background-color: @gray-lighter;
-      border: 1px solid @chosen-border;
+      border: @chosen-border;
       .border-top-radius(@chosen-border-radius);
       .border-bottom-radius(@chosen-border-radius);
       #gradient > .vertical(white, @gray-lighter);

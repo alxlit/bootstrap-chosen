@@ -327,14 +327,14 @@
 
 .chosen-container-active {
   .chosen-single {
-    border: 1px solid $chosen-focus-border;
+    border: $chosen-focus-border;
     @include box-shadow($chosen-focus-box-shadow);
     @include transition($chosen-focus-transition);
   }
 
   &.chosen-with-drop .chosen-single {
     background-color: $input-bg;
-    border: 1px solid $chosen-focus-border;
+    border: $chosen-focus-border;
     @include border-bottom-radius(0);
     @include box-shadow($chosen-focus-box-shadow);
     @include transition($chosen-focus-transition);
@@ -350,7 +350,7 @@
   }
 
   .chosen-choices {
-    border: 1px solid $chosen-focus-border;
+    border: $chosen-focus-border;
     @include border-bottom-radius(0);
     @include box-shadow($chosen-focus-box-shadow);
     @include transition($chosen-focus-transition);

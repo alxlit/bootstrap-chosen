@@ -132,7 +132,7 @@
     -webkit-background-clip: padding-box;
        -moz-background-clip: padding;
             background-clip: padding-box;
-    border: 1px solid $chosen-border;
+    border: $chosen-border;
     @include border-top-radius($chosen-border-radius);
     @include border-bottom-radius($chosen-border-radius);
     @include box-shadow($chosen-box-shadow);
@@ -201,7 +201,7 @@
 
     input[type="text"] {
       background: url($chosen-sprite-path) no-repeat 100% -20px, $chosen-background;
-      border: 1px solid $chosen-border;
+      border: $chosen-border;
       @include border-top-radius($chosen-border-radius);
       @include border-bottom-radius($chosen-border-radius);
       @include box-shadow($chosen-box-shadow);
@@ -232,7 +232,7 @@
 .chosen-container-multi {
   .chosen-choices {
     background-color: $chosen-background;
-    border: 1px solid $chosen-border;
+    border: $chosen-border;
     @include border-top-radius($chosen-multi-border-radius);
     @include border-bottom-radius($chosen-multi-border-radius);
     @include box-shadow($chosen-box-shadow);
@@ -275,7 +275,7 @@
          -moz-background-clip: padding;
               background-clip: padding-box;
       background-color: $gray-lighter;
-      border: 1px solid $chosen-border;
+      border: $chosen-border;
       @include border-top-radius($chosen-border-radius);
       @include border-bottom-radius($chosen-border-radius);
       @include gradient-vertical(white, $gray-lighter);
@@ -327,14 +327,14 @@
 
 .chosen-container-active {
   .chosen-single {
-    border: 1px solid $chosen-focus-border;
+    border: $chosen-focus-border;
     @include box-shadow($chosen-focus-box-shadow);
     @include transition($chosen-focus-transition);
   }
 
   &.chosen-with-drop .chosen-single {
     background-color: $input-bg;
-    border: 1px solid $chosen-focus-border;
+    border: $chosen-focus-border;
     @include border-bottom-radius(0);
     @include box-shadow($chosen-focus-box-shadow);
     @include transition($chosen-focus-transition);
@@ -350,7 +350,7 @@
   }
 
   .chosen-choices {
-    border: 1px solid $chosen-focus-border;
+    border: $chosen-focus-border;
     @include border-bottom-radius(0);
     @include box-shadow($chosen-focus-box-shadow);
     @include transition($chosen-focus-transition);

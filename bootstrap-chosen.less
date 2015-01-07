@@ -443,6 +443,21 @@
   }
 }
 
+.input-group {
+  .chosen-container:last-child {
+    .chosen-single, .chosen-default, .chosen-choices {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+  .chosen-container:not(:last-child) {
+    .chosen-single, .chosen-default, .chosen-choices {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {
   .chosen-rtl .chosen-search input[type="text"],
   .chosen-container-single .chosen-single abbr,

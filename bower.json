@@ -16,6 +16,7 @@
     "bootstrap-chosen-variables.scss",
     "bootstrap-chosen.less",
     "bootstrap-chosen.scss",
+    "bootstrap-chosen.css",
     "chosen-sprite.png",
     "chosen-sprite@2x.png"
   ],

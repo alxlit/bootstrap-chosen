@@ -1,0 +1,16 @@
+{
+  "name": "bootstrap-chosen",
+  "version": "1.0.0",
+  "description": "An alternate stylesheet for Chosen that integrates with Bootstrap. ",
+  "repository": {
+    "type": "git",
+    "url": "alxlit/bootstrap-chosen"
+  },
+  "homepage": "https://github.com/alxlit/bootstrap-chosen",
+  "license": "MIT",
+  "keywords": [
+    "bootstrap",
+    "chosen",
+    "bootstrap-chosen"
+  ]
+}
